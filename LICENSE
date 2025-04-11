@@ -1,0 +1,12 @@
+
+---
+
+### 📦 7. **Update `pubspec.yaml`**
+Change:
+```yaml
+name: flutter_responsive_kit
+description: A responsive UI toolkit for Flutter apps (mobile, tablet, desktop).
+version: 0.0.1
+homepage: https://github.com/yourusername/flutter_responsive_kit
+environment:
+  sdk: ">=3.0.0 <4.0.0"
