@@ -1,2 +1,8 @@
-## [0.0.1] - April 11, 2025
-- Initial release: ResponsiveBuilder, ResponsiveText, ResponsiveRow & Col.
+## [0.0.1] - 2025-04-11
+
+- Initial release 🎉
+- Added:
+    - `ResponsiveBuilder`
+    - `ResponsiveText`
+    - `ResponsiveRow`, `ResponsiveCol`
+    - Utility helpers like `isMobile`, `isTablet`, `screenWidth`

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Amar5499/flutter_responsive_kit/main/assets/logo.png" width="200" alt="flutter_responsive_kit logo">
+</p>
+
 # 🧩 flutter_responsive_kit
 
 A lightweight and flexible Flutter package for building fully responsive UIs — mobile, tablet, and desktop — with ease.

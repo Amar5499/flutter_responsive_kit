@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../utils/responsive_utils.dart';
 
 typedef ResponsiveWidgetBuilder = Widget Function(BuildContext context);
 
