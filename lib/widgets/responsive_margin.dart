@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import '../utils/responsive_utils.dart';
 
-/// A widget that adds responsive padding based on screen size.
-class ResponsivePadding extends StatelessWidget {
+/// A widget that adds responsive margin based on screen size.
+class ResponsiveMargin extends StatelessWidget {
   final Widget child;
   final double mobile;
   final double? tablet;
   final double? desktop;
 
-  const ResponsivePadding({
+  const ResponsiveMargin({
     super.key,
     required this.child,
     required this.mobile,
@@ -18,14 +18,14 @@ class ResponsivePadding extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final padding = ResponsiveUtils.isDesktop(context)
+    final margin = ResponsiveUtils.isDesktop(context)
         ? (desktop ?? tablet ?? mobile)
         : ResponsiveUtils.isTablet(context)
             ? (tablet ?? mobile)
             : mobile;
 
-    return Padding(
-      padding: EdgeInsets.all(padding),
+    return Container(
+      margin: EdgeInsets.all(margin),
       child: child,
     );
   }

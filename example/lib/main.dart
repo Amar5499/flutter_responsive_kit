@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Responsive Kit Demo',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(title: const Text('Responsive Kit')),
         body: ResponsiveBuilder(
@@ -24,37 +25,69 @@ class MyApp extends StatelessWidget {
   }
 
   Widget _buildScreen(BuildContext context, String title) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(16),
       child: Column(
         children: [
           ResponsiveText(
             title,
             maxFontSize: 28,
+            minFontSize: 18,
             style: const TextStyle(fontWeight: FontWeight.bold),
           ),
-          const SizedBox(height: 20),
+          const ResponsiveGap(mobile: 16),
           ResponsiveRow(
             children: [
               ResponsiveCol(
                 xs: 12,
                 md: 6,
-                child: Container(
-                  height: 100,
-                  color: Colors.amber,
-                  child: const Center(child: Text('Column 1')),
+                child: ResponsivePadding(
+                  mobile: 8,
+                  child: Container(
+                    height: 120,
+                    color: Colors.amber,
+                    child: const Center(child: Text('Column 1')),
+                  ),
                 ),
               ),
               ResponsiveCol(
                 xs: 12,
                 md: 6,
-                child: Container(
-                  height: 100,
-                  color: Colors.teal,
-                  child: const Center(child: Text('Column 2')),
+                child: ResponsivePadding(
+                  mobile: 8,
+                  child: Container(
+                    height: 120,
+                    color: Colors.teal,
+                    child: const Center(child: Text('Column 2')),
+                  ),
                 ),
               ),
             ],
+          ),
+          const ResponsiveGap(mobile: 24),
+          ResponsiveAlign(
+            mobile: Alignment.center,
+            tablet: Alignment.centerLeft,
+            child: Container(
+              padding: const EdgeInsets.all(12),
+              color: Colors.blueGrey,
+              child: const Text(
+                'Responsive Align Example',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
+          const ResponsiveGap(mobile: 24),
+          ResponsiveMargin(
+            mobile: 16,
+            child: Container(
+              padding: const EdgeInsets.all(16),
+              color: Colors.deepPurple,
+              child: const Text(
+                'This container has responsive margin',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
           ),
         ],
       ),
