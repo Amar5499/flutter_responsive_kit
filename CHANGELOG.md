@@ -39,3 +39,8 @@
 - **Documentation**:
   - Added examples for `ResponsiveMargin`, `ResponsiveAlign`, and `ResponsiveGap` in the README.
   - Improved Dartdoc coverage for the new responsive utilities.
+  - 
+## [0.0.4] - 2025-04-17
+
+- **Refactor**:
+  - Renamed file for consistency in naming convention (converted to lowercase).
